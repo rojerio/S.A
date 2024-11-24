@@ -1,0 +1,49 @@
+/* Centraliza o conteúdo da página */
+.fotos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+  }
+  
+  /* Centraliza o título "Atrações" */
+  .fotos-container h1 {
+    text-align: center;
+    color: #800000; /* Ajuste a cor conforme necessário */
+    margin-bottom: 20px;
+  }
+  
+  /* Galeria de imagens com 4 imagens por linha */
+  .galeria {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar a linha quando necessário */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-top: 20px;
+  }
+  
+  /* Cada item da galeria (imagem) */
+  .galeria-item {
+    width: 22%; /* 4 imagens em cada linha */
+    aspect-ratio: 1; /* Para garantir que as imagens sejam quadradas */
+    overflow: hidden;
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+  /* Estilo da imagem dentro de cada item */
+  .galeria-item img {
+    width: 100%; /* Ocupa toda a largura do item */
+    height: 100%; /* Ocupa toda a altura do item */
+    object-fit: cover; /* A imagem será cortada para preencher o espaço */
+  }
+  
+.splash-text {
+    position: fixed;  
+    bottom: 20px;    
+    right: 20px;    
+    font-size: 1.5rem; 
+    color: #800000;   
+    font-weight: bold; 
+    z-index: 1000;     
+  }
+  

@@ -1,0 +1,146 @@
+/* Configuração básica */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  #adm {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 5fr 1fr;
+    grid-template-areas:
+      "main main main main"
+      "form find find find"
+      "form ul ul ul"
+      "form ul ul ul";
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Responsividade para telas menores */
+  @media only screen and (max-width: 800px) {
+    #adm {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "main"
+        "find"
+        "ul"
+        "form";
+    }
+  }
+  
+  /* Estilização da seção main */
+  main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f51b5;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Estilização do formulário */
+  form {
+    grid-area: form;
+    background-color: #E6E6E6;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Labels e inputs do formulário */
+  form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  form input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Lista de clientes */
+
+  .find {
+    grid-area: find;
+    padding: 20px;
+    border-radius: 8px;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  ul {
+    grid-area: ul;
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+  
+  ul li {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Botões em cada cliente */
+  ul li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  ul li button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Barra de pesquisa */
+  .search-bar {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }

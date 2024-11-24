@@ -1,0 +1,132 @@
+import React, { useState } from 'react';
+import '../css/busca.css';
+import imgsuite from '../img/imgsuite.jpg';
+import imgchale from '../img/chalé.jpg';
+import close from '../img/closebutton.png';
+import imgcabana from '../img/cabana.jpg';
+import imgestacionamento from '../img/estacionamento.jpg';
+
+export default function Busca() {
+  const [checkInDate, setCheckInDate] = useState('');
+  const [checkOutDate, setCheckOutDate] = useState('');
+  const [numberOfDays, setNumberOfDays] = useState(0);
+  const [selectedRoomPrice, setSelectedRoomPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [showForm, setShowForm] = useState(false);
+
+  // Função para calcular o número de dias entre check-in e check-out
+  const calculateNumberOfDays = (checkIn, checkOut) => {
+    const startDate = new Date(checkIn);
+    const endDate = new Date(checkOut);
+
+    if (startDate && endDate && endDate > startDate) {
+      const diffTime = Math.abs(endDate - startDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      setNumberOfDays(diffDays);
+    } else {
+      setNumberOfDays(0); // Reseta para 0 se as datas forem inválidas
+    }
+  };
+
+  // Handlers para mudanças nas datas
+  const handleCheckInChange = (e) => {
+    const newCheckInDate = e.target.value;
+    setCheckInDate(newCheckInDate);
+    calculateNumberOfDays(newCheckInDate, checkOutDate);
+  };
+
+  const handleCheckOutChange = (e) => {
+    const newCheckOutDate = e.target.value;
+    setCheckOutDate(newCheckOutDate);
+    calculateNumberOfDays(checkInDate, newCheckOutDate);
+  };
+
+  // Handler para abrir o formulário e definir o preço do quarto selecionado
+  const handleSelect = (price) => {
+    setSelectedRoomPrice(price);
+    setShowForm(true);
+  };
+
+  // Handler para fechar o formulário e resetar os estados
+  const handleClose = () => {
+    setShowForm(false);
+    setCheckInDate('');
+    setCheckOutDate('');
+    setNumberOfDays(0);
+    setSelectedRoomPrice(0);
+    setTotalPrice(0);
+  };
+
+  // Calcula o valor total da estadia
+  const handleCalculateTotalPrice = (event) => {
+    event.preventDefault();
+    if (numberOfDays > 0 && selectedRoomPrice > 0) {
+      setTotalPrice(numberOfDays * selectedRoomPrice);
+    }
+  };
+
+  return (
+    <div className="content reserva-container">
+      <div className="Align2">
+        <h1 className="titulo-busca">Encontre o Quarto Perfeito para você</h1>
+
+        <div className="quarto-box">
+          <img src={imgsuite} alt="Imagem Exemplo" className="quarto-image" />
+          <div className="quarto-text" id="Suite">
+            <h3 className="quarto-title">Suite com cozinha</h3>
+            <h3 className="quarto-subtitle">R$499</h3>
+            <button
+              className="select-button"
+              onClick={() => handleSelect(499)}
+            >
+              Selecionar
+            </button>
+          </div>
+        </div>
+        {/* Repita os outros quartos aqui */}
+      </div>
+
+      {showForm && (
+        <>
+          <div className="modal-background" onClick={handleClose}></div>
+          <div className="Align1">
+            <form className="busca-form" onSubmit={handleCalculateTotalPrice}>
+              <div className="form-group">
+                <button className="close-button" onClick={handleClose}>
+                  <img src={close} alt="Fechar" />
+                </button>
+                <label htmlFor="checkInDate">Data de Check-in:</label>
+                <input
+                  type="date"
+                  id="checkInDate"
+                  value={checkInDate}
+                  onChange={handleCheckInChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="checkOutDate">Data de Check-out:</label>
+                <input
+                  type="date"
+                  id="checkOutDate"
+                  value={checkOutDate}
+                  onChange={handleCheckOutChange}
+                />
+              </div>
+              {numberOfDays > 0 && (
+                <p>Número de dias de estadia: {numberOfDays}</p>
+              )}
+              <div className="buttons-container-forBusca">
+                <button type="submit" className="btn-h">
+                  Calcular Total
+                </button>
+              </div>
+              {totalPrice > 0 && (
+                <p>Valor total da estadia: R${totalPrice}</p>
+              )}
+            </form>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}

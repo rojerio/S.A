@@ -1,0 +1,97 @@
+
+.home-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+ 
+  .left-section {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .left-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #800000;
+  }
+  
+  .image-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .image-horizontal {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .image-vertical {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Seção Direita */
+  .right-section {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .right-section p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #800000;
+    padding-left: 10px;
+    margin: 20px 0;
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn-h {
+    padding: 12px 25px;
+    background: #800000;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .btn-h:hover {
+    background: #a00;
+  }
+  
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+  }
+  

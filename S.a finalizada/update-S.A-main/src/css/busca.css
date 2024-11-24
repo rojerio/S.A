@@ -1,0 +1,207 @@
+/* Container principal com disposição flexível */
+.reserva-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Estilo para o título da busca */
+.titulo-busca {
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    color: #800000;
+    margin-top: auto;
+}
+
+/* Botão de ação */
+.btn-p {
+    padding: 12px 25px;
+    background: #800000;
+    color: #fff;
+    margin-top: 7%;
+    margin-left: 20% ;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Estilo para cada bloco de quarto */
+.quarto-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    width: 1260px;
+    min-width: 750px;
+    height: 150px;
+    margin-left: 30px;
+}
+
+/* Imagem do quarto */
+.quarto-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Texto do quarto */
+.quarto-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+/* Título do quarto */
+.quarto-title {
+    margin-top: 80px;
+    font-size: 30px;
+    margin-bottom: 1px;
+    text-align: left;
+    margin-left: 17px;
+}
+
+/* Subtítulo do quarto */
+.quarto-subtitle {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: gray;
+    margin-left: 17px;
+}
+
+/* Botão de selecionar */
+.select-button {
+    padding: 5px 20px;
+    background-color: #800000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.select-button:hover {
+    background-color: #0056b3;
+}
+
+/* Alinhamento do Align1 */
+.Align1 {
+    position: fixed; /* Fixa o modal na tela */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o modal */
+    background-color: #E6E6E6;;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Garante que o modal fique sobre o conteúdo */
+    width: 290px;
+    max-width: 100%; /* Impede que o modal ultrapasse a tela */
+}
+
+/* Fundo escurecido atrás do modal */
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor do fundo */
+    z-index: 1000; /* Fica abaixo do modal */
+}
+
+/* Estilo do botão de fechar */
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Estilo do formulário */
+form {
+    padding: 7px;
+}
+
+/* Estilo para os campos de input do formulário */
+.form-group {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
+    color: #555;
+}
+
+/* Estilo para o botão de pesquisa */
+.search-button {
+    padding: 10px 25px;
+    background-color: #800000;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 35%;
+    margin-top: 10px;
+}
+
+.search-button:hover {
+    background-color: #a52a2a;
+}
+
+/* Estilo para os labels dos campos do formulário */
+form label {
+    align-self: center;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+    color: #333;
+}
+
+/* Estilo para os inputs do formulário */
+form input {
+    align-self: center;
+    margin-left:5% ;
+    width: 210px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para a mensagem de erro */
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  p{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+    margin-left:8% ;
+  }
+  .total-price{
+    font-size: 20px;
+  }
+  
+  
