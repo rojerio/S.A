@@ -52,7 +52,7 @@ function Cadastro() {
 
   return (
     <div className="content">
-      <form onSubmit={handleCreateCliente}>
+      <form  className='cadastro-form' onSubmit={handleCreateCliente}>
         <label>
           Nome:
           <input
