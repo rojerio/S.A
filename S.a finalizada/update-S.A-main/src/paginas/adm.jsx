@@ -125,6 +125,8 @@ const Adm = () => {
     cliente.nome.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  console.log(filteredClientes)
+
   return (
     <div id='adm'>
       <main>
@@ -205,11 +207,12 @@ const Adm = () => {
       <ul>
         {filteredClientes.map(cliente => (
           <li key={cliente.id}>
-            {cliente.nome} - {cliente.email} - {cliente.telefone} - {cliente.quarto} - {cliente.dataEntrada} - {cliente.dataSaida}
+            {cliente.nome} - {cliente.email} - {cliente.telefone} - {cliente.quarto} - {cliente.dataentrada} - {cliente.datasaida}
             <button onClick={() => handleEditCliente(cliente)}>Editar</button>
             <button onClick={() => handleDeleteCliente(cliente.id)}>Excluir</button>
           </li>
-        ))}
+        ))
+        }
       </ul>
     </div>
   );
