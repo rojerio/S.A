@@ -218,7 +218,7 @@ export default function Busca() {
                   className="btn-p"
                   onClick={handleSubmitReservation}
                 >
-                  Fazer reserva
+                  Simular reserva
                 </button>
               </div>
             </form>

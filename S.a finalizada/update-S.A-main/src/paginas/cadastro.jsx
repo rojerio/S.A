@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'; // Importa React e hooks useState e useEffect
 import axios from 'axios'; // Importa a biblioteca axios para fazer requisições HTTP
 import '../App.css'; // Importa o arquivo de estilos CSS
+import '../css/cadastro.css';
 
 function Cadastro() {
   const [clientes, setClientes] = useState([]); // Declara um estado para a lista de clientes
