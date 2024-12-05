@@ -36,7 +36,25 @@
 
   - deve ficar assim:</br>
   ![7](https://github.com/user-attachments/assets/73a95db8-490f-44cd-b0ee-ee527ca5255c)</br></br>
-
-
+  - agora no vscode abra o projeto e entre no terminal na pasta do backend</br>
+  - use o comando: npm i</br>
+  - isso vai instalar todos os pacotes do node.js</br>
+  - e mande rodar com o comando node index.js</br>
+  - caso algum erro apareça tente instalar o cors e o express nos componentes no node, que possivelmente não foi instalado com o outro comando</br>
+  - comando: npm i cors, express</br>
+  - se estiver tudo funcionando no backend, ele já deve está rodando o nosso banco de dados</br>
+  - ele deve está assim:</br>
+  ![back](https://github.com/user-attachments/assets/c57528c5-472d-4831-8e7c-b9e7dec50908)</br></br>
+  - agora crie um novo terminal para que possamos entrar na pasta do frontend (no nosso caso o front está com o nome de update-S.A-main)</br>
+  - no front end o processo é diferente, teremos que entrar no front-end depois na pasta src</br>
+  - porque as abas estão na pasta src, não teria como fazer fora dele</br>
+  - agora use esse código: npm i</br>
+  - vai instalar de novo a biblioteca do node.js mas agora para o front-end</br>
+  - agora só rodar o front usando o comando a baixo:</br>
+  - npm run dev</br>
+  - deve ficar assim:</br>
+  ![front](https://github.com/user-attachments/assets/e701640c-250f-457e-98c1-5734f560e81a)</br></br>
+  - agora deve está tudo rondando e quando rodar deve aparecer essa pagina:</br>
+  ![teste](https://github.com/user-attachments/assets/1bedcde8-6021-4e0a-9fde-c156074ad47d)
 
 </div>
