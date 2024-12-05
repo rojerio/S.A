@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/d84c6933-b32a-4292-a054-c3cf953fb1a4)![7](https://github.com/user-attachments/assets/fe16becb-e403-41a6-9353-9612f67d2e69)![image](https://github.com/user-attachments/assets/d8a2bf13-a4f1-4acc-a685-62572c9f9e18)
 <div>
   para podermos iniciar o projeto siga o passo a passo abaixo:</br></br>
 
